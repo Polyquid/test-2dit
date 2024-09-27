@@ -15,6 +15,7 @@
     color: $primary;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 
     &::marker {
       content: none;
