@@ -13,6 +13,11 @@ export default [{ languageOptions: { globals: globals.browser } },
       '@stylistic/js/array-element-newline': ['error', { multiline: true }],
       '@stylistic/js/quote-props': ['error', 'as-needed'],
       '@stylistic/js/semi': ['error', 'always'],
-      '@stylistic/js/function-call-argument-newline': ['error', 'consistent']
+      '@stylistic/js/function-call-argument-newline': ['error', 'consistent'],
+      '@stylistic/js/dot-location': ['error', 'property'],
+      '@stylistic/js/padded-blocks': ['error', 'never']
     }
+  },
+  {
+    ignores: ['build/']
   }];

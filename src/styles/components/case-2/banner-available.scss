@@ -1,0 +1,20 @@
+@import './variables.scss';
+@import '../../../fonts/ProximaNova/ProximaNova.scss';
+
+.banner-available {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  padding: 2px 5px;
+  background-color: white;
+  font-family: 'Proxima Nova';
+
+  &__text {
+    margin: 0;
+    font-size: 8px;
+    color: $accent;
+  }
+}

@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.accordion {
+  padding: 20px 30px;
+  border: 1px solid $border-color;
+
+  &__wrapper {
+    width: 560px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    color: $primary;
+    display: flex;
+    justify-content: space-between;
+
+    &::marker {
+      content: none;
+    }
+  }
+}

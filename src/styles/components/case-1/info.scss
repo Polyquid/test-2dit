@@ -1,0 +1,34 @@
+@import '../../../fonts/Lato/Lato.scss';
+@import './variables.scss';
+
+.info {
+  display: flex;
+  width: 1155px;
+  margin: 49px auto 0px;
+  justify-content: space-between;
+  gap: 54px;
+  font-family: 'Lato';
+
+  &__text {
+    width: 540px;
+  }
+
+  &__title {
+    color: $primary;
+    font-size: 34px;
+    line-height: 1.3;
+    font-weight: normal;
+    margin: 0 0 30px;
+  }
+
+  &__description {
+    color: $secondary;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

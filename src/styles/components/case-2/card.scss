@@ -1,0 +1,61 @@
+@import './variables.scss';
+@import '../../../fonts/ProximaNova/ProximaNova.scss';
+
+.card {
+  background-color: $background;
+  font-family: 'Proxima Nova';
+
+  &__wrapper {
+    max-width: 942px;
+    margin: 16px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+  }
+
+  &__img-wrapper {
+    position: relative;
+  }
+
+  &__info {
+    margin-left: 12.5px;
+  }
+
+  &__category {
+    margin: 15px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: $accent;
+  }
+
+  &__title {
+    margin: 10px 0 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: $primary;
+  }
+
+  &__articul {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: $muted;
+
+    &_value {
+      color: $primary;
+    }
+  }
+
+  &__price {
+    margin: 10px 0 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $muted;
+
+    &_value {
+      font-size: 24px;
+      color: $accent;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,3 +1,12 @@
-h1 {
-  color: blue;
+@import './vendor/normalize.scss';
+@import './components/container.scss';
+@import './components/wrapper.scss';
+@import './components/header.scss';
+@import './components/case-1';
+@import './components/case-2';
+
+$background: rgba(255, 255, 255, 1);
+
+body {
+  background-color: $background;
 }

@@ -1,0 +1,38 @@
+$background-secondary: rgba(239, 245, 245, 1);
+$background-accent: rgba(249, 166, 32, 1);
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $background-secondary;
+
+  &__title {
+    font-weight: normal;
+    font-size: 1.5rem;
+
+    &_bolder {
+      font-weight: bold;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 9999px;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+
+    &:visited {
+      color: inherit
+    }
+
+    &:hover {
+      background-color: rgb(84, 133, 246);
+    }
+  }
+}
