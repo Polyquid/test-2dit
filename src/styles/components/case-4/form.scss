@@ -1,0 +1,58 @@
+@import './variables.scss';
+@import '../../../fonts/GothamPro/GothamPro.scss';
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 50px);
+  gap: 35px 40px;
+
+  &__wrapper {
+    width: 1134px;
+    margin: 0 auto;
+    padding-top: 209px;
+  }
+
+  &__title {
+    font-size: 70px;
+    line-height: 1.05;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0 20px;
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__policy {
+    grid-column-start: span 2;
+    font-size: 14px;
+
+    &_link {
+      color: $primary;
+    }
+  }
+
+  &__input {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid white;
+    padding-left: 30px;
+    color: white;
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  &__input[name="phoneNumber"] {
+    padding-left: 53px;
+    background-image: url('/img/case-4/placeholder.jpg');
+    background-repeat: no-repeat;
+    background-position: 17px 50%;
+  }
+}

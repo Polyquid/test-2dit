@@ -74,9 +74,13 @@ const img = () => src(paths.img.src, { encoding: false })
   .pipe(dest(paths.img.dest))
   .pipe(browserSync.stream());
 
+const libs = () => src('node_modules/@maskito/**')
+  .pipe(dest('build/@maskito'))
+  .pipe(browserSync.stream());
+
 const build = series(
   clean,
-  parallel(styles, scripts, pages, icons, fonts, img)
+  parallel(styles, scripts, pages, icons, fonts, img, libs)
 );
 
 const server = () => {

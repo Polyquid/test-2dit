@@ -65,6 +65,7 @@
 @media (width < 1310px) {
   .possibilities {
     background-position: center;
+    background-size: cover;
 
     &:nth-of-type(2n) {
       background-position: center;
@@ -87,7 +88,7 @@
     &__title {
       mix-blend-mode: normal;
       font-size: 30px;
-      margin: 30px auto 0;
+      margin: 40px auto 0;
       max-width: 530px;
       text-align: center;
     }
@@ -99,9 +100,40 @@
     }
   
     &__order {
-      top: -20px;
-      left: -38px;
+      top: -25px;
+      left: -15px;
       font-size: 16px;
+    }
+  }
+}
+
+@media (width < 600px) {
+  .possibilities {
+
+    &:nth-of-type(2n) {
+
+      .possibilities__description {
+        font-size: 12px;
+      }
+  
+      .possibilities__title {
+        font-size: 24px;
+      }
+    }
+  
+    &__title {
+      font-size: 24px;
+    }
+  
+    &__description {
+      padding-left: 10px;
+      font-size: 12px;
+    }
+  
+    &__order {
+      top: -20px;
+      left: 0;
+      font-size: 10px;
     }
   }
 }
