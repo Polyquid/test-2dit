@@ -1,0 +1,107 @@
+@import '../../../fonts/HelveticaNeueCyr/HelveticaNeueCyr.scss';
+
+.possibilities {
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 513px;
+  border: 1px solid transparent;
+  margin-bottom: 60px;
+  font-family: 'Helvetica Neue Cyr';
+
+  &:nth-of-type(2n) {
+    background-position: left;
+
+    .possibilities__description {
+      margin-left: 695px;
+    }
+
+    .possibilities__title {
+      margin-top: 80px;
+      margin-left: 368px;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__wrapper {
+    max-width: 1290px;
+    margin: 15px auto;
+  }
+
+  &__title {
+    position: relative;
+    color: white;
+    mix-blend-mode: difference;
+    font-size: 48px;
+    font-weight: normal;
+    max-width: 920px;
+    margin: 0;
+    margin-top: 54px;
+    margin-left: 38px;
+  }
+
+  &__description {
+    color: black;
+    max-width: 520px;
+    font-size: 16px;
+    margin-left: 80px;
+    padding-left: 30px;
+    border-left: 1px solid black;
+    line-height: 1.5;
+  }
+
+  &__order {
+    position: absolute;
+    top: -10px;
+    left: -38px;
+    color: white;
+    mix-blend-mode: difference;
+    font-size: 20px;
+  }
+}
+
+@media (width < 1310px) {
+  .possibilities {
+    background-position: center;
+
+    &:nth-of-type(2n) {
+      background-position: center;
+
+      .possibilities__description {
+        color: white;
+        margin: 50px auto;
+        border-left: 1px solid white;
+      }
+  
+      .possibilities__title {
+        mix-blend-mode: normal;
+        font-size: 30px;
+        margin: 30px auto 0;
+        max-width: 530px;
+        text-align: center;
+      }
+    }
+  
+    &__title {
+      mix-blend-mode: normal;
+      font-size: 30px;
+      margin: 30px auto 0;
+      max-width: 530px;
+      text-align: center;
+    }
+  
+    &__description {
+      color: white;
+      margin: 50px auto;
+      border-left: 1px solid white;
+    }
+  
+    &__order {
+      top: -20px;
+      left: -38px;
+      font-size: 16px;
+    }
+  }
+}
