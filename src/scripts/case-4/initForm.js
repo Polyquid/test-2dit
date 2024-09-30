@@ -1,8 +1,8 @@
-import { Maskito } from '/@maskito/core/index.esm.js';
+import { Maskito } from '@maskito/core';
 
 const maskitoOptions = {
   mask: [
-    '+', '7', ' ', '(', /\d/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/
+    '+', '7', '(', /\d/, /\d/, /\d/, ')', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/
   ]
 };
 

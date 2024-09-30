@@ -6,6 +6,8 @@ import uglify from 'gulp-uglify';
 import cleanCSS from 'gulp-clean-css';
 import { deleteAsync } from 'del';
 import browserSync from 'browser-sync';
+import webpack from 'webpack-stream';
+import webpackConfig from './webpack.config.js';
 
 const sass = gulpSass(Compiler);
 
@@ -45,8 +47,9 @@ const styles = () => src(paths.styles.src)
   .pipe(browserSync.stream());
 
 const scripts = () => src(paths.scripts.src)
-  .pipe(babel())
-  .pipe(uglify())
+  .pipe(webpack({
+    config: webpackConfig
+  }))
   .pipe(dest(paths.scripts.dest))
   .pipe(browserSync.stream());
 
@@ -74,13 +77,9 @@ const img = () => src(paths.img.src, { encoding: false })
   .pipe(dest(paths.img.dest))
   .pipe(browserSync.stream());
 
-const libs = () => src('node_modules/@maskito/**')
-  .pipe(dest('build/@maskito'))
-  .pipe(browserSync.stream());
-
 const build = series(
   clean,
-  parallel(styles, scripts, pages, icons, fonts, img, libs)
+  parallel(styles, scripts, pages, icons, fonts, img)
 );
 
 const server = () => {

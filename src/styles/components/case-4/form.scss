@@ -1,5 +1,5 @@
 @import './variables.scss';
-@import '../../../fonts/GothamPro/GothamPro.scss';
+@import '../../../fonts/GothamPro.scss';
 
 .form {
   display: grid;
@@ -32,7 +32,8 @@
 
   &__policy {
     grid-column-start: span 2;
-    font-size: 14px;
+    font-size: 15px;
+    margin: 0;
 
     &_link {
       color: $primary;
@@ -51,8 +52,12 @@
 
   &__input[name="phoneNumber"] {
     padding-left: 53px;
-    background-image: url('/img/case-4/placeholder.jpg');
+    background-image: url('../../../img/case-4/placeholder.jpg');
     background-repeat: no-repeat;
     background-position: 17px 50%;
+  }
+
+  button {
+    cursor: pointer;
   }
 }

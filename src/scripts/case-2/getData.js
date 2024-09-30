@@ -3,7 +3,7 @@ const getData = () => {
     title: 'Театральное кресло Прайм',
     category: 'Кресла театральные',
     articul: '789-2341',
-    img: '/img/case-2/itemExample.jpg',
+    img: '../../img/case-2/itemExample.jpg',
     isAvailable: false,
     banner: '',
     price: '6 762'
