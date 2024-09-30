@@ -8,4 +8,4 @@ initInfo();
 initCards();
 initPossibilities();
 initForm();
-// initCharts();
+initCharts();

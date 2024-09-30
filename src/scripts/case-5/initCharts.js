@@ -1,65 +1,49 @@
-import Chart from 'chart.js/auto';
+
+import buildChartsElem from './buildChartsElem.js';
 import getData from './getData.js';
 
 const initCharts = () => {
-  const canvasElem = document.querySelector('#sales');
+  const wrapper = document.querySelector('.case-5');
 
-  const data = {
-    labels: [
-      'Россия', 'Blue', 'Yellow'
-    ],
-    datasets: [{
-      label: 'My First Dataset',
-      data: [500, 50, 100],
-      backgroundColor: [
-        '#9D121A', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'
-      ],
-      hoverOffset: 4
-    }]
-  };
-  const config = {
-    type: 'doughnut',
-    data: data,
-    options: {
-      cutout: '80%',
-      radius: 100,
-      aspectRatio: 240 / 360,
-      elements: {
-        arc: {
-          spacing: 0,
-          borderWidth: 0
-        }
-      },
-      plugins: {
-        legend: {
-          display: true,
-          position: 'bottom',
-          align: 'start',
-          labels: {
-            usePointStyle: true,
-            pointStyle: 'circle',
-            font: {
-              size: 12
-            }
-          }
-        },
-        subtitle: {
-          display: true,
-          text: '335 шт.',
-          color: '#262424'
-        },
-        title: {
-          display: true,
-          text: 'Страны',
-          color: '#A7A7A7'
-        }
-      }
-    }
-  };
-  const myChart = new Chart(canvasElem, config);
-  console.log(myChart);
-  myChart.canvas.parentNode.style.height = '360px';
-  myChart.canvas.parentNode.style.width = '240px';
+  // TODO: Переписать инициализацию wrapper, group, subtitle, separator. Инициализация по ходу обработки data
+  const chartsWrapper = document.createElement('div');
+  chartsWrapper.classList.add('charts__wrapper');
+
+  const chartsSalesGroup = document.createElement('div');
+  chartsSalesGroup.classList.add('charts__group');
+
+  const chartsRevenueGroup = document.createElement('div');
+  chartsRevenueGroup.classList.add('charts__group');
+
+  const chartsSalesTitle = document.createElement('h3');
+  chartsSalesTitle.classList.add('charts__subtitle');
+  chartsSalesTitle.textContent = 'Количество проданных пицц';
+
+  const chartsRevenueTitle = document.createElement('h3');
+  chartsRevenueTitle.classList.add('charts__subtitle');
+  chartsRevenueTitle.textContent = 'Выручка';
+
+  const separatorSales = document.createElement('div');
+  separatorSales.classList.add('charts__separator');
+
+  const separatorRevenue = document.createElement('div');
+  separatorRevenue.classList.add('charts__separator');
+
+  chartsSalesGroup.appendChild(chartsSalesTitle);
+  chartsRevenueGroup.appendChild(chartsRevenueTitle);
+  chartsSalesGroup.appendChild(separatorSales);
+  chartsRevenueGroup.appendChild(separatorRevenue);
+  chartsWrapper.appendChild(chartsSalesGroup);
+  chartsWrapper.appendChild(chartsRevenueGroup);
+  wrapper.appendChild(chartsWrapper);
+  const [salesData, revenueData] = getData();
+
+  salesData.forEach((data) => {
+    buildChartsElem(data, chartsSalesGroup);
+  });
+  revenueData.forEach((data) => {
+    buildChartsElem(data, chartsRevenueGroup);
+  });
 };
 
 export default initCharts;

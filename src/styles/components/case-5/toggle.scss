@@ -1,0 +1,56 @@
+@import './variables.scss';
+@import '../../../fonts/Commisioner.scss';
+
+.toggle {
+  display: flex;
+  gap: 13px;
+  
+
+  &__label {
+    display: none;
+  }
+
+  &__checkbox {
+    appearance: none;
+    width: 33px;
+    height: 20px;
+    background: $toggle-active;
+    border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s ease-in-out;
+
+    &:checked {
+      border: 1px solid $toggle-active;
+      background: none;
+      &::after {
+        border: 1px solid $toggle;
+        background: $toggle-active;
+        left: calc(100% - 11px - 4px);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: $toggle;
+      left: 4px;
+      top: calc(50% - 11px / 2);
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.55;
+    color: $text-muted;
+
+    &_active {
+      color: $text-active;
+    }
+  }
+}

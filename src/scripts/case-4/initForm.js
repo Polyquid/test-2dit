@@ -6,6 +6,8 @@ const maskitoOptions = {
   ]
 };
 
+// TODO: добавить валидацию данных
+
 const initForm = () => {
   const formElem = document.querySelector('.form');
   formElem.addEventListener('submit', (e) => {
