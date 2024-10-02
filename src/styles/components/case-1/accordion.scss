@@ -1,8 +1,9 @@
 @import './variables.scss';
 
 .accordion {
-  padding: 20px 30px;
   border: 1px solid $border-color;
+  height: 60px;
+  box-sizing: border-box;
 
   &__wrapper {
     width: 560px;
@@ -12,10 +13,14 @@
   }
 
   &__title {
+    padding: 19px 30px 20px;
     color: $primary;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.4;
 
     &::marker {
       content: none;

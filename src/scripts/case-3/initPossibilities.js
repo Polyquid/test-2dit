@@ -10,16 +10,13 @@ const initPossibilities = () => {
     possibilitiesElem.style.backgroundImage = `url(${imgPath})`;
 
     const possibilitiesOrder = document.createElement('span');
-    possibilitiesOrder.classList.add('possibilities__order');
     possibilitiesOrder.textContent = `.0${index + 1}`;
 
     const possibilitiesTitle = document.createElement('h3');
-    possibilitiesTitle.classList.add('possibilities__title');
     possibilitiesTitle.appendChild(possibilitiesOrder);
     possibilitiesTitle.append(title.toUpperCase());
 
     const possibilitiesDescription = document.createElement('p');
-    possibilitiesDescription.classList.add('possibilities__description');
     possibilitiesDescription.textContent = description;
 
     possibilitiesElem.appendChild(possibilitiesTitle);

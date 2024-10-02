@@ -5,6 +5,13 @@
   background-color: $background;
   font-family: 'Proxima Nova';
 
+  &__img {
+    width: 290px;
+    height: 290px;
+    object-fit: cover;
+    object-position: center;
+  }
+
   &__wrapper {
     max-width: 942px;
     margin: 16px auto 0;
@@ -19,9 +26,11 @@
 
   &__info {
     margin-left: 12.5px;
+    width: 265px;
   }
 
   &__category {
+    text-wrap: wrap;
     margin: 15px 0 0;
     font-size: 14px;
     font-weight: 400;
@@ -29,6 +38,7 @@
   }
 
   &__title {
+    text-wrap: wrap;
     margin: 10px 0 0;
     font-size: 18px;
     font-weight: 600;
@@ -36,12 +46,13 @@
   }
 
   &__articul {
+    text-wrap: wrap;
     margin: 10px 0 0;
     font-size: 14px;
     font-weight: 400;
     color: $muted;
 
-    &_value {
+    &-value {
       color: $primary;
     }
   }
@@ -52,7 +63,7 @@
     font-weight: 400;
     color: $muted;
 
-    &_value {
+    &-value {
       font-size: 24px;
       color: $accent;
       font-weight: bold;

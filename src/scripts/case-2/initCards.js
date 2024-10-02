@@ -88,7 +88,7 @@ const initCards = () => {
     cardArticul.classList.add('card__articul');
     cardArticul.textContent = 'Артикул: ';
     const cardArticulName = document.createElement('span');
-    cardArticulName.classList.add('card__articul_value');
+    cardArticulName.classList.add('card__articul-value');
     cardArticulName.textContent = cardData.articul;
     cardArticul.appendChild(cardArticulName);
 
@@ -96,7 +96,7 @@ const initCards = () => {
     cardPrice.classList.add('card__price');
     cardPrice.textContent = 'от: ';
     const cardPriceValue = document.createElement('span');
-    cardPriceValue.classList.add('card__price_value');
+    cardPriceValue.classList.add('card__price-value');
     cardPriceValue.textContent = cardData.price;
     cardPrice.appendChild(cardPriceValue);
     cardPrice.append(' Р');

@@ -3,7 +3,7 @@
 
 .form {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 340px);
   grid-template-rows: repeat(2, 50px);
   gap: 35px 40px;
 
@@ -18,12 +18,13 @@
     line-height: 1.05;
     font-weight: bold;
     margin: 0;
+    letter-spacing: calc(70px * -0.03);
   }
 
   &__description {
     font-size: 18px;
     line-height: 1.5;
-    margin: 10px 0 20px;
+    margin: 0 0 20px;
   }
 
   &__label {
@@ -32,7 +33,7 @@
 
   &__policy {
     grid-column-start: span 2;
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
 
     &_link {
