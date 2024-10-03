@@ -2,7 +2,6 @@
 
 .accordion {
   border: 1px solid $border-color;
-  height: 60px;
   box-sizing: border-box;
 
   &__wrapper {
@@ -13,7 +12,7 @@
   }
 
   &__title {
-    padding: 19px 30px 20px;
+    padding: 18px 30px 19px;
     color: $primary;
     display: flex;
     justify-content: space-between;
@@ -25,5 +24,9 @@
     &::marker {
       content: none;
     }
+  }
+
+  &__description {
+    padding: 0 30px;
   }
 }
